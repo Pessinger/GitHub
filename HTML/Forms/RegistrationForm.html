@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Last Name</title>
+	<meta charset="utf-8" />
+	<style>
+        table, th, td {
+            border:solid;
+            border-width:1px;
+            border-color:#8C8C8C;
+            border-collapse:collapse;
+        }
+        th {
+            text-align: right;
+            font-family: Arial, Verdana, sans-serif;
+            font-size: 15px;
+            padding: 5px 5px 5px 5px;
+        }
+        td {
+            font-family: Arial, Verdana, sans-serif,;
+            font-size: 15px;
+            padding: 5px 5px 5px 5px;
+        }
+        textarea {
+            resize:none;
+        }
+        .nested {
+           border:none;
+        }        
+        select {
+            width:220px;
+        }
+        td#green {
+            background-color: #D1EDE1;
+            text-align:center;
+        }              
+    </style>
+</head>
+<body>
+	<form method="POST" action="processdata.php">
+		<table>
+			<tr>
+				<td align="right">
+					<b>Last Name</b>
+				</td>
+				<td>
+				<input type="text" name="Last Name" value="Nakov" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>First Name</b>
+				</td>
+				<td>
+				<input type="text" name="First Name" value="Svetlin" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Address</b>
+				</td>
+				<td>
+				<textarea  name="Address" rows="4" cols="35">17 Hristo Botev Str. floor 3, apt. 12</textarea>
+				</td>
+			<tr>
+				 <td align="right">
+					   <b>City</b>
+					 </td>
+					 <td>
+				  <table>
+					<tr>
+					 <td>
+					 <input type="text" name="City" value="Kaspichan" />
+					 </td>
+					 <td align="right">
+						<b>State</b>
+					 </td>
+					 <td>
+					 <input type="text" name="State"/>
+					 </td>
+					</tr>
+				  </table>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Zip/Postal Code</b>
+				</td>
+				<td>
+				<input type="text" name="Zip/Postal Code" value="9325" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Country</b>
+				</td>
+				<td>
+				<select name="Country">
+					<option value="Bulgaria"
+					selected="selected">Bulgaria</option>
+					<option value="USA">USA</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Phone (country code,<br> area code, number)</b>
+				</td>
+				<td>
+				(+<input type=tel size=3 value="359">) <input type=tel size=3 value="88"> - <input type=tel size=4 value="8334343" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Email</b>
+				</td>
+				<td>
+				<input type="email" name="Email" value="nakov@kaspichan.org" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Birth Date</b>
+				</td>
+				<td>
+                    Month
+                    <input id="birthday" name="month" type="text" value="06" size="1"/>
+                    Day
+                    <input name="day" type="text" value="14" size="1" />
+                    Year (4 digit)
+                    <input name="year" type="text" value="1980" size="1"/>
+                </td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Gender</b>
+				</td>
+				<td>
+				<select name="Gender">
+					<option value="Male"
+					selected="selected">Male</option>
+					<option value="Female">Female</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Starting date</b>
+				</td>
+				<td>
+				<input type="radio" name="Start date" value="Spring 2006" />Spring 2006
+				<input type="radio" name="Start date" value="Summer 2006" />Summer 2006
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<b>Comments/Questions</b>
+				</td>
+				<td>
+				<textarea name="comments" id="comments" rows="5" cols="35">Please send me more information about the lodging.</textarea>
+				</td>
+			</tr>
+			<tfoot>
+			   <tr>
+				<td colspan="2" id="green">
+				<input type="submit" name="submitBtn" value="Submit" />
+				<input type="reset" name="resetBtn" value="Clear This Form" />
+				</td>
+			   </tr>	
+			</tfoot>
+		</table>
+	</form>
+</body>
+</html>
